@@ -4,7 +4,6 @@ const lightboxImage = document.querySelector('.lightbox__image');
 const closeBtn = document.querySelector('[data-action="close-lightbox"]');
 const overlay = document.querySelector('.lightbox__overlay');
 
-// Створення розмітки без використання кривих косих лапок
 const galleryMarkup = galleryItems
   .map(item => {
     return '<li class="gallery__item">' +
@@ -23,7 +22,7 @@ closeBtn.addEventListener('click', onCloseModal);
 overlay.addEventListener('click', onCloseModal);
 
 function onGalleryClick(event) {
-  event.preventDefault(); // Стопаємо перехід по лінці
+  event.preventDefault(); 
 
   const isImageEl = event.target.classList.contains('gallery__image');
   if (!isImageEl) return;
